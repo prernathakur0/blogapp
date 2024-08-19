@@ -1,0 +1,77 @@
+/* Container for the About page */
+.about-container {
+  width: 100%; /* Ensure full width */
+  margin: 0; /* Remove default margin */
+  padding: 20px; /* Add padding as needed */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: relative; /* Relative positioning for absolute children */
+}
+
+/* Styles for the heading */
+.about-container h1 {
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #333; /* Dark color for contrast */
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: left; /* Align text to the left */
+}
+
+/* Styles for each section */
+.image-section {
+  position: relative; /* Relative positioning for children */
+  width: 100%;
+  max-width: 800px; /* Limit maximum width of each section */
+  margin: 20px auto; /* Center align content */
+  padding: 20px;
+  background: #fff; /* Background color for content */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+/* Pop-up effect on hover */
+.image-section:hover {
+  transform: translateY(-10px); /* Slightly raise the element */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow for elevated effect */
+}
+
+/* Image styles */
+.image-section img {
+  max-width: 100%; /* Full width of parent container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Text styles */
+.image-section p {
+  font-size: 16px; /* Adjust text size as needed */
+  line-height: 1.5; /* Improve readability */
+  color: #555; /* Slightly lighter color for text */
+}
+
+/* Ensure no space on the left or right of the page */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Hide horizontal overflow if any */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 1200px) {
+  .image-section {
+    padding: 15px; /* Adjust padding on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .image-section {
+    padding: 10px; /* Further adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .image-section p {
+    text-align: center; /* Center text on smaller screens */
+  }
+}

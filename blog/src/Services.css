@@ -1,0 +1,112 @@
+/* Container for the hero message and video */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide any overflow from the video */
+  }
+  
+  /* Styles for the video */
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the container */
+    z-index: -1; /* Place the video behind the text */
+  }
+  
+  /* General styles for the hero message */
+  .hero-msg {
+    position: absolute; /* Position the text relative to the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    background-color: rgba(245, 245, 245, 0.8); /* Semi-transparent background */
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    border-radius: 10px; /* Optional: Rounded corners for the background */
+    z-index: 1; /* Ensure the text is on top of the video */
+  }
+  
+  
+  /* General styles for the row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust this value to increase or decrease the space between cards */
+    padding: 20px;
+    justify-content: center; /* Centers the cards in the row */
+  }
+  
+  /* Styles for individual cards */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.33% - 20px); /* Three cards per row with space */
+    margin: 10px; /* Adds extra space around each card */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Hover effect for cards */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styles for card images */
+  .card-img-top {
+    width: 100%;
+    height: 200px; /* Adjusted height */
+    object-fit: cover;
+  }
+  
+  /* Styles for card body */
+  .card-body {
+    padding: 15px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  /* Styles for card title */
+  .card-title {
+    font-size: 18px; /* Adjusted font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  /* Styles for card text */
+  .card-text {
+    font-size: 14px; /* Adjusted font size */
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 1024px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex: 1 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex: 1 1 100%; /* One card per row on the smallest screens */
+    }
+  }
+  
